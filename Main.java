@@ -5,23 +5,29 @@ import java.awt.*;
 
 public class Main {
   public static void main(String[] args) {  
-    World world = new World(300,300);
    
-    Turtle yertle = new Turtle(world);
     // Add your code here
-    public void Draw(int sides, length, shapes){
+   
+  
+  void Draw(int sides, int length, int shapes){
+   World world = new World(300,300);
+   
+    world.setVisible(true);
+    yertle.pendown();
+  Turtle yertle = new Turtle(world);
        for (int i = 0; i < shapes; i++) {
       for (int j = 0; j < sides; j++){
         yertle.forward(length);
-        yertle.turnLeft();
+        yertle.turn(90);
       }
       yertle.turnLeft();
       }
     }
-
-   
-  
-  
-    world.setVisible(true);
   }
+   
+ 
+  
+   
+  }
+   Draw(4,50,2);
 }
